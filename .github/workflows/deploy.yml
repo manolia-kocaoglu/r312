@@ -45,8 +45,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22041
         script: |
-        cd /var/www/r312/server
-        npm ci
-        npm install send server-destroy
-        PORT=8082 pm2 start -f entry.mjs
-        
+          cd /var/www/r312/server
+          npm ci
+          npm install send server-destroy
+          PORT=8082 pm2 start -f entry.mjs
